@@ -1,0 +1,29 @@
+/*./styles/variables.css*/
+:root {
+  --primary-color: #7C4DFF;
+  --primary--color-hover: #5b3dd3;
+  --secondary-color: #D1C4E9;
+  --secondary-color-hover: #9f79e5;
+  --accent-color: #00BFA5;
+
+  /* Fondo y texto */
+  --background-color: #F9F9FB;
+  --text-color: #1E1E1E;
+
+  /* Estados */
+  --color-info: #0288D1;
+  --color-success: #43A047;
+  --color-warning: #FBC02D;
+  --color-error: #E53935;
+
+  /* Fuente */
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
