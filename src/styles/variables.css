@@ -8,7 +8,8 @@
 
   /* Fondo y texto */
   --background-color: #F9F9FB;
-  --text-color: #1E1E1E;
+  --text-color-black: #1E1E1E;
+  --text-color-white: #fbfbfb;
 
   /* Estados */
   --color-info: #0288D1;
