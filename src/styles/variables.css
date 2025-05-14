@@ -1,30 +1,39 @@
 /*./styles/variables.css*/
 :root {
-  --primary-color: #7C4DFF;
-  --primary--color-hover: #5b3dd3;
-  --secondary-color: #D1C4E9;
-  --secondary-color-hover: #9f79e5;
-  --accent-color: #00BFA5;
+    /*base*/
+    font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
 
-  /* Fondo y texto */
-  --background-color: #F9F9FB;
-  --text-color-black: #1E1E1E;
-  --text-color-white: #fbfbfb;
+    /* Colores principales */
+    --primary-color: #7C4DFF;
+    --primary-color-hover: #5b3dd3;
+    --secondary-color: #D1C4E9;
+    --secondary-color-hover: #9f79e5;
+    --accent-color: #00BFA5;
 
-  /* Estados */
-  --color-info: #0288D1;
-  --color-success: #43A047;
-  --color-warning: #FBC02D;
-  --color-error: #E53935;
+    /* Fondo */
+    --background-color: #F9F9FB;
 
-  /* Fuente */
-  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+    /* Texto */
+    --text-color-black: #1E1E1E;
+    --text-color-white: #fbfbfb;
 
-  color-scheme: light;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    /* Estados */
+    --color-info: #0288D1;
+    --color-success: #43A047;
+    --color-warning: #FBC02D;
+    --color-error: #E53935;
+
+    /* Tipografía */
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+
+
+    /* Accesibilidad */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Tema */
+    color-scheme: light;
 }
