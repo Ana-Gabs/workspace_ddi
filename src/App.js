@@ -7,7 +7,7 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import NotFound from './pages/NotFound';
 import FontSizeDemo from './components/fuentes/FontSizeDemo.jsx';
-import FlexDemo from './components/fuentes/FlexDemo.jsx';
+import FlexDemo from './components/flexbox/FlexDemo.jsx';
 
 function App() {
   return (
