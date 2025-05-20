@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/FlexDemo.css';
+import './FlexDemo.css';
 
 export default function FlexDemo() {
   return (

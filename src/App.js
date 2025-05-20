@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import NotFound from './pages/NotFound';
 import FontSizeDemo from './components/fuentes/FontSizeDemo.jsx';
+import FlexDemo from './components/fuentes/FlexDemo.jsx';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         {/*<Route path="/" element={<HomePage />} />*/}
         <Route path="/" element={<FontSizeDemo />} />
+        <Route path="/flexdemo" element={<FlexDemo />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
