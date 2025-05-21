@@ -2,11 +2,9 @@ import React from 'react';
 import styles from '../styles/products.module.css';
 import ProductCard from '../components/ProductCard';
 
-// ✅ Usa import para que Webpack maneje bien las imágenes
 import p1 from '../../../assets/p1.jpg';
 import p2 from '../../../assets/p1.jpg';
 import p3 from '../../../assets/p1.jpg';
-import aboutImage from '../../../assets/about.jpg';
 
 const mockProducts = [
   { id: 1, name: 'Producto A', description: 'Descripción A', image: p1 },
@@ -32,13 +30,6 @@ export default function ProductsView() {
             Somos una empresa dedicada a proporcionar los mejores productos con la mejor calidad.
             Nuestro compromiso es la satisfacción de nuestros clientes.
           </p>
-        </div>
-        <div className={styles['info-image']}>
-          <img
-            src={aboutImage}
-            alt="Sobre nosotros"
-            className={styles['responsive-image']}
-          />
         </div>
       </div>
     </section>
