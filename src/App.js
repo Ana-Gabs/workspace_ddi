@@ -3,9 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // ---- Paginas ------
-import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
-import NotFound from './pages/NotFound';
+import ProductsPage from './features/Products/pages/ProductsPage.jsx';
 /*
 import FontSizeDemo from './components/fuentes/FontSizeDemo.jsx';
 import FlexDemo from './components/flexbox/FlexDemo.jsx';
@@ -18,7 +16,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        {<Route path="/" element={<HomePage />} />}
+        {<Route path="/" element={<ProductsPage />} />}
         {/*
         <Route path="/" element={<FontSizeDemo />} />
         <Route path="/flexdemo" element={<FlexDemo />} />
