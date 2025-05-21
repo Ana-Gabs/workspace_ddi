@@ -6,16 +6,26 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import NotFound from './pages/NotFound';
+/*
 import FontSizeDemo from './components/fuentes/FontSizeDemo.jsx';
 import FlexDemo from './components/flexbox/FlexDemo.jsx';
+import GridDemo from './components/grid/GridDemo.jsx';
+import LayoutDemo from './components/comparative/LayoutDemo.jsx';
+import ExampleDemo from './components/example/ExampleDemo.jsx';
+*/
 
 function App() {
   return (
     <Router>
       <Routes>
-        {/*<Route path="/" element={<HomePage />} />*/}
+        {<Route path="/" element={<HomePage />} />}
+        {/*
         <Route path="/" element={<FontSizeDemo />} />
         <Route path="/flexdemo" element={<FlexDemo />} />
+        <Route path="/griddemo" element={<GridDemo />} />
+        <Route path="/layoutdemo" element={<LayoutDemo />} />
+        <Route path="/exampledemo" element={<ExampleDemo />} />
+        */}
         <Route path="/about" element={<AboutPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
