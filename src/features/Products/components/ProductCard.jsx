@@ -4,18 +4,18 @@ import styles from '../styles/products.module.css';
 
 export default function ProductCard({ product }) {
   return (
-    <div className={styles.productCard}>
-      <div className={styles.imageContainer}>
+    <div className={styles['product-card']}>
+      <div className={styles['image-container']}>
         <img
           src={product.image}
           alt={product.name}
-          className={styles.responsiveImage}
+          className={styles['responsive-image']}
           loading="lazy"
         />
       </div>
-      <div className={styles.cardContent}>
-        <h4 className={styles.productTitle}>{product.name}</h4>
-        <p className={styles.productDescription}>{product.description}</p>
+      <div className="ion-padding">
+        <h4 className={styles['product-title']}>{product.name}</h4>
+        <p className={styles['product-description']}>{product.description}</p>
         <button>Ver detalles</button>
       </div>
     </div>

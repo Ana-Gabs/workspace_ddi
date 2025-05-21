@@ -13,22 +13,28 @@ export default function ProductsView() {
   return (
     <section className="ion-padding">
       <h2>Productos Destacados</h2>
-      <div className={styles.productGrid}>
+
+      {/* Usa className con bracket notation para acceder a nombres con guiones */}
+      <div className={styles['product-grid']}>
         {mockProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
 
-      <div className={styles.infoSection}>
-        <div className={styles.infoText}>
+      <div className={styles['info-section']}>
+        <div className={styles['info-text']}>
           <h3>Sobre nosotros</h3>
           <p>
             Somos una empresa dedicada a proporcionar los mejores productos con la mejor calidad.
             Nuestro compromiso es la satisfacción de nuestros clientes.
           </p>
         </div>
-        <div className={styles.infoImage}>
-          <img src="/assets/about.jpg" alt="Sobre nosotros" className={styles.responsiveImage} />
+        <div className={styles['info-image']}>
+          <img
+            src="/assets/about.jpg"
+            alt="Sobre nosotros"
+            className={styles['responsive-image']}
+          />
         </div>
       </div>
     </section>
