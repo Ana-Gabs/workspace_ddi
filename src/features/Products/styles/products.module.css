@@ -1,4 +1,4 @@
-/* features/Products/styles/product.module.css */ 
+/* features/Products/styles/product.module.css */
 /* 1. REJILLAS FLEXIBLES - Optimizado para diferentes resoluciones */
 .product-grid {
     display: grid;
@@ -63,18 +63,13 @@
 }
 
 /* 2. Tarjeta de producto y contenido */
-.product-card {
-    height: 100%;
+.product-card ion-card-content {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-
-    ion-card-content {
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
+    justify-content: space-between;
 }
+
 
 /* 3. Imágenes flexibles con aspect-ratio */
 .image-container {
@@ -116,129 +111,125 @@
 
 /* 4. Títulos y descripciones responsivas */
 .product-title {
-  font-size: 1.1rem;
-  line-height: 1.4;
-  margin-bottom: 8px;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-bottom: 8px;
 
-  @media screen and (min-width: 1080px) {
-    font-size: 1.3rem;
-  }
+    @media screen and (min-width: 1080px) {
+        font-size: 1.3rem;
+    }
 
-  @media screen and (min-width: 1440px) {
-    font-size: 1.5rem;
-    line-height: 1.5;
-  }
+    @media screen and (min-width: 1440px) {
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
 }
 
 .product-description {
-  color: var(--ion-color-medium);
-  font-size: 0.9rem;
-  line-height: 1.6;
-  margin-bottom: 16px;
+    color: var(--ion-color-medium);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
 
-  @media screen and (min-width: 1080px) {
-    font-size: 1rem;
-  }
+    @media screen and (min-width: 1080px) {
+        font-size: 1rem;
+    }
 
-  @media screen and (min-width: 1440px) {
-    font-size: 1.1rem;
-    line-height: 1.7;
-  }
+    @media screen and (min-width: 1440px) {
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
 }
 
 /* 5. Sección de información adicional */
 .info-section {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 32px;
 
-  @media screen and (min-width: 720px) and (orientation: landscape),
-         screen and (min-width: 1080px) and (orientation: portrait) {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .info-text {
-    flex: 1;
-
-    h3 {
-      font-size: 1.4rem;
-      margin-bottom: 12px;
-
-      @media screen and (min-width: 1080px) {
-        font-size: 1.6rem;
-      }
-
-      @media screen and (min-width: 1440px) {
-        font-size: 1.8rem;
-      }
+    @media screen and (min-width: 720px) and (orientation: landscape),
+    screen and (min-width: 1080px) and (orientation: portrait) {
+        flex-direction: row;
+        align-items: center;
     }
 
-    p {
-      font-size: 0.95rem;
-      line-height: 1.6;
-      max-width: 65ch;
+    .info-text h3 {
+        font-size: 1.4rem;
+        margin-bottom: 12px;
 
-      @media screen and (min-width: 1080px) {
-        font-size: 1.05rem;
-      }
+        @media screen and (min-width: 1080px) {
+            font-size: 1.6rem;
+        }
 
-      @media screen and (min-width: 1440px) {
-        font-size: 1.15rem;
-        line-height: 1.7;
-      }
-    }
-  }
-
-  .info-image {
-    flex: 1;
-    min-height: 200px;
-
-    @media screen and (min-width: 1080px) {
-      min-height: 250px;
+        @media screen and (min-width: 1440px) {
+            font-size: 1.8rem;
+        }
     }
 
-    @media screen and (min-width: 1440px) {
-      min-height: 300px;
+    .info-text p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        max-width: 65ch;
+
+        @media screen and (min-width: 1080px) {
+            font-size: 1.05rem;
+        }
+
+        @media screen and (min-width: 1440px) {
+            font-size: 1.15rem;
+            line-height: 1.7;
+        }
     }
-  }
+
+    .info-image {
+        flex: 1;
+        min-height: 200px;
+
+        @media screen and (min-width: 1080px) {
+            min-height: 250px;
+        }
+
+        @media screen and (min-width: 1440px) {
+            min-height: 300px;
+        }
+    }
 }
 
 /* 6. Compatibilidad y accesibilidad */
 /* Alta densidad de píxeles */
 @media screen and (-webkit-min-device-pixel-ratio: 2),
-       screen and (min-resolution: 192dpi) {
-  .product-title,
-  .info-section h3 {
-    font-weight: 500;
-  }
+screen and (min-resolution: 192dpi) {
+
+    .product-title,
+    .info-section h3 {
+        font-weight: 500;
+    }
 }
 
 /* Modo oscuro */
 @media (prefers-color-scheme: dark) {
-  .product-description {
-    color: var(--ion-color-light-shade);
-  }
+    .product-description {
+        color: var(--ion-color-light-shade);
+    }
 }
 
 /* Movimiento reducido */
 @media (prefers-reduced-motion: reduce) {
-  .responsive-image {
-    transition: none;
-  }
+    .responsive-image {
+        transition: none;
+    }
 }
 
 /* 7. Indicador de resolución para pruebas */
 .resolution-indicator {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  z-index: 1000;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    z-index: 1000;
 }
-
