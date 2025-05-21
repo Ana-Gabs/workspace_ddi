@@ -13,7 +13,7 @@ export default function ProductCard({ product }) {
           loading="lazy"
         />
       </div>
-      <div className="ion-padding">
+      <div className={styles['product-content']}>
         <h4 className={styles['product-title']}>{product.name}</h4>
         <p className={styles['product-description']}>{product.description}</p>
         <button>Ver detalles</button>

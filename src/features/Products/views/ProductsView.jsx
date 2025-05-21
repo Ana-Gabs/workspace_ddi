@@ -1,20 +1,24 @@
-// features/Products/views/ProductsView.jsx
 import React from 'react';
 import styles from '../styles/products.module.css';
 import ProductCard from '../components/ProductCard';
 
+// ✅ Usa import para que Webpack maneje bien las imágenes
+import p1 from '../../../assets/p1.jpg';
+import p2 from '../../../assets/p1.jpg';
+import p3 from '../../../assets/p1.jpg';
+import aboutImage from '../../../assets/about.jpg';
+
 const mockProducts = [
-  { id: 1, name: 'Producto A', description: 'Descripción A', image: '/assets/p1.jpg' },
-  { id: 2, name: 'Producto B', description: 'Descripción B', image: '/assets/p2.jpg' },
-  { id: 3, name: 'Producto C', description: 'Descripción C', image: '/assets/p3.jpg' },
+  { id: 1, name: 'Producto A', description: 'Descripción A', image: p1 },
+  { id: 2, name: 'Producto B', description: 'Descripción B', image: p2 },
+  { id: 3, name: 'Producto C', description: 'Descripción C', image: p3 },
 ];
 
 export default function ProductsView() {
   return (
-    <section className="ion-padding">
+    <section className={styles['products-section']}>
       <h2>Productos Destacados</h2>
 
-      {/* Usa className con bracket notation para acceder a nombres con guiones */}
       <div className={styles['product-grid']}>
         {mockProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
@@ -31,7 +35,7 @@ export default function ProductsView() {
         </div>
         <div className={styles['info-image']}>
           <img
-            src="/assets/about.jpg"
+            src={aboutImage}
             alt="Sobre nosotros"
             className={styles['responsive-image']}
           />

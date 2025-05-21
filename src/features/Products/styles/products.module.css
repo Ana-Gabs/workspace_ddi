@@ -1,235 +1,261 @@
-/* features/Products/styles/product.module.css */
-/* 1. REJILLAS FLEXIBLES - Optimizado para diferentes resoluciones */
+/* 1. REJILLA RESPONSIVA */
 .product-grid {
-    display: grid;
-    gap: 16px;
-    margin-bottom: 24px;
-
-    /* Base para móviles pequeños */
-    grid-template-columns: 1fr;
-
-    /* Smartphones HD a Full HD en modo portrait o landscape */
-    @media screen and (min-width: 720px) and (max-width: 1079px),
-    screen and (min-width: 1280px) and (max-width: 1919px) {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* Full HD o superior */
-    @media screen and (min-width: 1080px) {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-
-    /* Pantallas altas tipo Full HD+ */
-    @media screen and (min-height: 2200px) {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-
-        .product-card {
-            min-height: 330px;
-        }
-    }
-
-    /* Quad HD+ */
-    @media screen and (min-width: 1440px) {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
-
-        .product-card {
-            min-height: 360px;
-        }
-    }
-
-    /* Ultra HD (4K) */
-    @media screen and (min-width: 2160px) {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
-    }
-
-    /* Landscape bajo (móviles girados) */
-    @media screen and (orientation: landscape) and (max-height: 900px) {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    /* Tablets iPad clásicos 4:3 */
-    @media screen and (min-width: 768px) and (max-width: 834px) and (min-height: 1024px) {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* Tablets Android 16:10 */
-    @media screen and (min-width: 1280px) and (min-height: 800px) {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  display: grid;
+  gap: 16px;
+  margin-bottom: 24px;
+  grid-template-columns: 1fr;
 }
 
-/* 2. Tarjeta de producto y contenido */
-.product-card ion-card-content {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+@media screen and (min-width: 720px) and (max-width: 1079px),
+       screen and (min-width: 1280px) and (max-width: 1919px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
+@media screen and (min-width: 1080px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
 
-/* 3. Imágenes flexibles con aspect-ratio */
+@media screen and (min-height: 2200px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .product-card {
+    min-height: 330px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .product-card {
+    min-height: 360px;
+  }
+}
+
+@media screen and (min-width: 2160px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 834px) and (min-height: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1280px) and (min-height: 800px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 2. TARJETA PRODUCTO */
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 3. IMAGEN Y CONTENEDOR */
 .image-container {
-    overflow: hidden;
-    width: 100%;
-    aspect-ratio: 16/9;
-    /* Base común */
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
 
-    /* Pantallas más altas */
-    @media screen and (min-width: 1080px) and (min-height: 2200px) {
-        aspect-ratio: 19.5/9;
-    }
+@media screen and (min-width: 1080px) and (min-height: 2200px) {
+  .image-container {
+    aspect-ratio: 19.5 / 9;
+  }
+}
 
-    @media screen and (min-width: 1440px) and (min-height: 3000px) {
-        aspect-ratio: 20/9;
-    }
+@media screen and (min-width: 1440px) and (min-height: 3000px) {
+  .image-container {
+    aspect-ratio: 20 / 9;
+  }
+}
 
-    /* iPad clásico 4:3 */
-    @media screen and (min-width: 768px) and (max-width: 834px) and (min-height: 1024px) {
-        aspect-ratio: 4/3;
-    }
+@media screen and (min-width: 768px) and (max-width: 834px) and (min-height: 1024px) {
+  .image-container {
+    aspect-ratio: 4 / 3;
+  }
+}
 
-    /* Tablet Android 16:10 */
-    @media screen and (min-width: 1280px) and (min-height: 800px) {
-        aspect-ratio: 16/10;
-    }
+@media screen and (min-width: 1280px) and (min-height: 800px) {
+  .image-container {
+    aspect-ratio: 16 / 10;
+  }
 }
 
 .responsive-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-
-    &:hover {
-        transform: scale(1.05);
-    }
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-/* 4. Títulos y descripciones responsivas */
+.responsive-image:hover {
+  transform: scale(1.05);
+}
+
+/* 4. TEXTO DEL PRODUCTO */
 .product-title {
-    font-size: 1.1rem;
-    line-height: 1.4;
-    margin-bottom: 8px;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
 
-    @media screen and (min-width: 1080px) {
-        font-size: 1.3rem;
-    }
+@media screen and (min-width: 1080px) {
+  .product-title {
+    font-size: 1.3rem;
+  }
+}
 
-    @media screen and (min-width: 1440px) {
-        font-size: 1.5rem;
-        line-height: 1.5;
-    }
+@media screen and (min-width: 1440px) {
+  .product-title {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
 }
 
 .product-description {
-    color: var(--ion-color-medium);
-    font-size: 0.9rem;
-    line-height: 1.6;
-    margin-bottom: 16px;
-
-    @media screen and (min-width: 1080px) {
-        font-size: 1rem;
-    }
-
-    @media screen and (min-width: 1440px) {
-        font-size: 1.1rem;
-        line-height: 1.7;
-    }
+  color: var(--ion-color-medium);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
 }
 
-/* 5. Sección de información adicional */
+@media screen and (min-width: 1080px) {
+  .product-description {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .product-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+}
+
+/* 5. SECCIÓN INFORMATIVA */
 .info-section {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-top: 32px;
-
-    @media screen and (min-width: 720px) and (orientation: landscape),
-    screen and (min-width: 1080px) and (orientation: portrait) {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .info-text h3 {
-        font-size: 1.4rem;
-        margin-bottom: 12px;
-
-        @media screen and (min-width: 1080px) {
-            font-size: 1.6rem;
-        }
-
-        @media screen and (min-width: 1440px) {
-            font-size: 1.8rem;
-        }
-    }
-
-    .info-text p {
-        font-size: 0.95rem;
-        line-height: 1.6;
-        max-width: 65ch;
-
-        @media screen and (min-width: 1080px) {
-            font-size: 1.05rem;
-        }
-
-        @media screen and (min-width: 1440px) {
-            font-size: 1.15rem;
-            line-height: 1.7;
-        }
-    }
-
-    .info-image {
-        flex: 1;
-        min-height: 200px;
-
-        @media screen and (min-width: 1080px) {
-            min-height: 250px;
-        }
-
-        @media screen and (min-width: 1440px) {
-            min-height: 300px;
-        }
-    }
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
 }
 
-/* 6. Compatibilidad y accesibilidad */
-/* Alta densidad de píxeles */
+@media screen and (min-width: 720px) and (orientation: landscape),
+       screen and (min-width: 1080px) and (orientation: portrait) {
+  .info-section {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.info-text h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+@media screen and (min-width: 1080px) {
+  .info-text h3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .info-text h3 {
+    font-size: 1.8rem;
+  }
+}
+
+.info-text p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 65ch;
+}
+
+@media screen and (min-width: 1080px) {
+  .info-text p {
+    font-size: 1.05rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .info-text p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+  }
+}
+
+.info-image {
+  flex: 1;
+  min-height: 200px;
+}
+
+@media screen and (min-width: 1080px) {
+  .info-image {
+    min-height: 250px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .info-image {
+    min-height: 300px;
+  }
+}
+
+/* 6. ACCESIBILIDAD Y COMPATIBILIDAD */
 @media screen and (-webkit-min-device-pixel-ratio: 2),
-screen and (min-resolution: 192dpi) {
-
-    .product-title,
-    .info-section h3 {
-        font-weight: 500;
-    }
+       screen and (min-resolution: 192dpi) {
+  .product-title,
+  .info-text h3 {
+    font-weight: 500;
+  }
 }
 
-/* Modo oscuro */
 @media (prefers-color-scheme: dark) {
-    .product-description {
-        color: var(--ion-color-light-shade);
-    }
+  .product-description {
+    color: var(--ion-color-light-shade);
+  }
 }
 
-/* Movimiento reducido */
 @media (prefers-reduced-motion: reduce) {
-    .responsive-image {
-        transition: none;
-    }
+  .responsive-image {
+    transition: none;
+  }
 }
 
-/* 7. Indicador de resolución para pruebas */
+/* 7. INDICADOR DE RESOLUCIÓN (debug) */
 .resolution-indicator {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    z-index: 1000;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  z-index: 1000;
 }

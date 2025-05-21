@@ -24,8 +24,10 @@ function App() {
         <Route path="/layoutdemo" element={<LayoutDemo />} />
         <Route path="/exampledemo" element={<ExampleDemo />} />
         */}
+        {/*
         <Route path="/about" element={<AboutPage />} />
         <Route path="*" element={<NotFound />} />
+        */ }
       </Routes>
     </Router>
   );
